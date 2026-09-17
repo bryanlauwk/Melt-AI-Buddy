@@ -6,7 +6,7 @@ MELT / DURI adapts the Mac AI Buddy architecture to Bryanlauwk Create's palm-siz
 
 Planning and physical fit-test stage.
 
-The upstream implementation is [AyhanSh/Mac-AI-Buddy](https://github.com/AyhanSh/Mac-AI-Buddy). Its repository currently states that no licence has been chosen. Upstream source is therefore not copied here. Add it only after written permission or an explicit reuse licence, preserving attribution and history.
+The upstream implementation is [AyhanSh/Mac-AI-Buddy](https://github.com/AyhanSh/Mac-AI-Buddy). Bryan confirmed author permission on 17 September 2026. The supplied source archive is preserved in `upstream/Mac-AI-Buddy/`; see `UPSTREAM.md` for provenance. This permission does not establish a general open-source licence for others.
 
 ## Confirmed architecture match
 

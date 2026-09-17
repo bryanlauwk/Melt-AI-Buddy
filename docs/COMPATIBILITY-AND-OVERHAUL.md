@@ -13,7 +13,7 @@ The electrical architecture is a strong match. The remaining uncertainty is mech
 | Area | Mac AI Buddy | MELT / DURI parts | Assessment | Required action |
 |---|---|---|---|---|
 | Controller | Seeed Studio XIAO ESP32S3 Sense | Same board | Exact match | Retain USB-C access, antenna clearance and reset access. |
-| Camera | XIAO Sense onboard OV2640 | Same; camera test passed | Exact match | Preserve lens sightline and flex-cable clearance. |
+| Camera | XIAO Sense onboard OV2640 | XIAO Sense camera; live test passed | Sensor variant must be verified | Preserve lens sightline and flex-cable clearance. |
 | Display | 1.5-inch SH1107 128×128 is the default; SSD1306 128×64 is supported | 0.96-inch SSD1306 128×64 module | Supported variant, not the default | Select the SSD1306 driver, verify I²C address, and redraw facial expressions for the wide 128×64 canvas. |
 | Servo driver | PCA9685 at I²C address 0x40 | Same board type | Exact functional match | Confirm actual header orientation and use the firmware channel definitions. |
 | Pan/tilt | Two SG90 servos | Two SG90 servos | Exact component class | Fit-test bodies and horns; measure neutral position and safe limits before powered motion. |
@@ -164,15 +164,10 @@ Test independently, in this order:
 
 The 0.96-inch OLED is not a project blocker. It changes the face proportions and bezel design, not the fundamental architecture.
 
-## Source and licensing gate
+## Upstream permission and provenance
 
-The upstream repository currently states that no licence has been chosen. Its source has therefore not been copied into this repository.
+Bryan confirmed author permission on 17 September 2026. The supplied ZIP snapshot is now preserved in `upstream/Mac-AI-Buddy/`, with upstream attribution in `UPSTREAM.md`. No upstream firmware was modified or flashed as part of the simulation work.
 
-Before importing upstream code:
+## Simulation delivered
 
-1. Ask the author to add an explicit licence or provide written reuse permission.
-2. Preserve author attribution and Git history.
-3. Record upstream commit SHA and all MELT-specific changes.
-4. Prefer a history-preserving fork/import over copying isolated files.
-
-Until that gate is cleared, this repository contains only original MELT planning and compatibility documentation.
+The Build Studio now has clickable frame/electronics, perpendicular pan and tilt joints, relative-angle sliders, a ±10° preview, camera presets and real component photos. STL geometry is source-based; mounting transforms and electronics geometry remain provisional. It does not perform collision, torque or wiring validation and cannot control hardware.
